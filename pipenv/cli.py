@@ -504,7 +504,7 @@ def lock(
     # Ensure that virtualenv is available.
     core.ensure_project(three=three, python=python)
     if requirements:
-        core.do_init(dev=dev, requirements=requirements)
+        core.do_init(deploy=True, dev=dev, requirements=requirements)
     core.do_lock(
         verbose=verbose, clear=clear, pre=pre, keep_outdated=keep_outdated
     )
